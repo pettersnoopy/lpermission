@@ -15,15 +15,15 @@
         android:layout_height="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:contentDescription="@string/commonlib_toast_message" />
+        android:contentDescription="@null" />
 
     <TextView
         android:id="@+id/toast_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/commonlib_px_8"
-        android:paddingBottom="@dimen/commonlib_px_8"
-        android:paddingStart="@dimen/commonlib_px_16"
-        android:paddingEnd="@dimen/commonlib_px_16"/>
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
 
 </LinearLayout>
