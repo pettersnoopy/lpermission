@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ltoast_default_text_Color">#FFFFFF</color>
+    <color name="ltoast_default_bg_Color">#4c4c4c</color>
+    <color name="ltoast_error_color">#D50000</color>
+    <color name="ltoast_info_color">#3F51B5</color>
+    <color name="ltoast_normal_color">#353A3E</color>
+    <color name="ltoast_success_color">#388E3C</color>
+    <color name="ltoast_warning_color">#FFA900</color>
+</resources>

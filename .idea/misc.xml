@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/software/projects/android/lpermission/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/software/projects/android/lpermission/ltoast/src/main/res/drawable/commonlib_shape_toast_bg.xml" value="0.21388888888888888" />
+        <entry key="..\:/software/projects/android/lpermission/ltoast/src/main/res/drawable/commonlib_toasty_ic_check_white_24dp.xml" value="0.21388888888888888" />
+        <entry key="..\:/software/projects/android/lpermission/ltoast/src/main/res/drawable/ic_launcher_background.xml" value="0.21388888888888888" />
+        <entry key="..\:/software/projects/android/lpermission/ltoast/src/main/res/layout/commonlib_toast_layout.xml" value="0.14792299898682879" />
       </map>
     </option>
   </component>

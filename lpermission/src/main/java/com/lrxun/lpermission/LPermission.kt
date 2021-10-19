@@ -81,7 +81,7 @@ class LPermission {
             .requestPermissions(callback)
     }
 
-    private fun isGranted(permission: String): Boolean {
+    fun isGranted(permission: String): Boolean {
         return Build.VERSION.SDK_INT < Build.VERSION_CODES.M || permissionFragment.get().isGranted(permission)
     }
 }
