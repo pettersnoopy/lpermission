@@ -1,3 +1,4 @@
 rootProject.name = "permission"
 include ':app',
         ':lpermission'
+include ':dimen_375'
