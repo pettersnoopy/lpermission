@@ -13,6 +13,21 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+//        maven {
+//            url "http://192.168.1.244:8088/luopeng/libraries/master"
+//            allowInsecureProtocol = true
+//        }
+        maven {
+            url "https://raw.githubusercontent.com/pettersnoopy/libraries/master"
+//            url "https://github.com/pettersnoopy/libraries/master"
+        }
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
