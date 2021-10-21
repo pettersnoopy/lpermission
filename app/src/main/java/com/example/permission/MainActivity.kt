@@ -1,6 +1,7 @@
 package com.example.permission
 
 import android.Manifest
+import android.content.pm.ActivityInfo
 import android.location.Location
 import android.os.Bundle
 import android.view.View
@@ -11,6 +12,9 @@ import com.lrxun.llocation.NativeLocationCallback
 import com.lrxun.lpermission.LPermission
 import com.lrxun.lpermission.Permission
 import com.lrxun.lpermission.PermissionCallback
+import com.lrxun.ltoast.LToast
+import com.zhihu.matisse.Matisse
+import com.zhihu.matisse.MimeType
 
 class MainActivity: FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +26,14 @@ class MainActivity: FragmentActivity() {
                 .subscribe(object : PermissionCallback {
                     override fun onResult(permission: Permission) {
                         if (permission.granted) {
-                            Toast.makeText(this@MainActivity, "申请成功", Toast.LENGTH_SHORT).show()
+                            Matisse.from(this@MainActivity)
+                                .choose(MimeType.ofImage(), false)
+                                .countable(true)
+                                .maxSelectable(1)
+                                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+                                .thumbnailScale(0.8f)
+                                .imageEngine(ZhihuImageEngine())
+                                .forResult(100)
                             return
                         }
                         if (permission.shouldShowRequestPermissionRationale) {

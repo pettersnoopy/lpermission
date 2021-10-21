@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/llocation" />
             <option value="$PROJECT_DIR$/lpermission" />
             <option value="$PROJECT_DIR$/ltoast" />
+            <option value="$PROJECT_DIR$/matisse" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

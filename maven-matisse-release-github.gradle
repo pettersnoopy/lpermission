@@ -1,0 +1,25 @@
+apply plugin: 'maven-publish'
+
+ext {
+    PUBLISH_LOCAL_PATH = rootDir.parentFile.absolutePath + "/libraries"
+    PUBLISH_GROUP_ID = 'com.lrxun'
+    PUBLISH_ARTIFACT_ID = 'matisse'
+    PUBLISH_VERSION = '1.0.1'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+            groupId PUBLISH_GROUP_ID
+            artifactId PUBLISH_ARTIFACT_ID
+            version PUBLISH_VERSION
+        }
+    }
+    repositories {
+        maven {
+            url = "file://" + new File(PUBLISH_LOCAL_PATH).absolutePath
+        }
+    }
+
+}
