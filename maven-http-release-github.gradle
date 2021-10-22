@@ -4,7 +4,7 @@ ext {
     PUBLISH_LOCAL_PATH = rootDir.parentFile.absolutePath + "/libraries"
     PUBLISH_GROUP_ID = 'com.lrxun'
     PUBLISH_ARTIFACT_ID = 'lhttp'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_VERSION = '1.0.2'
     PUBLISH_DESCRIPTION = 'copy from okgo, because author no longer work on it, thanks for the author'
 }
 

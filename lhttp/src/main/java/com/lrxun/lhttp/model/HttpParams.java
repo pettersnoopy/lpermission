@@ -9,6 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -268,5 +269,16 @@ public class HttpParams implements Serializable {
             result.append(entry.getKey()).append("=").append(entry.getValue());
         }
         return result.toString();
+    }
+
+    public Map<String, String> toParamsMap() {
+        Map<String, String> map = new HashMap<>();
+        for (ConcurrentHashMap.Entry<String, List<String>> entry : urlParamsMap.entrySet()) {
+            List<String> values = entry.getValue();
+            if (values.size() > 0) {
+                map.put(entry.getKey(), values.get(0));
+            }
+        }
+        return map;
     }
 }
