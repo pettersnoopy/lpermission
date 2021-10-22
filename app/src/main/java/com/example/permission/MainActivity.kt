@@ -7,6 +7,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
+import com.lrxun.lhttp.LHttp
+import com.lrxun.lhttp.callback.Callback
+import com.lrxun.lhttp.callback.StringCallback
+import com.lrxun.lhttp.model.Response
+import com.lrxun.lhttp.request.base.Request
 import com.lrxun.llocation.LNativeLocation
 import com.lrxun.llocation.NativeLocationCallback
 import com.lrxun.lpermission.LPermission
@@ -83,6 +88,15 @@ class MainActivity: FragmentActivity() {
                         println(location)
                     }
                 })
+            LHttp.get<String>("https://www.baidu.com").execute(object : StringCallback() {
+                override fun onSuccess(response: Response<String>?) {
+                    println(response?.body())
+                }
+
+                override fun onCacheSuccess(response: Response<String>?) {
+                    println(response?.body())
+                }
+            })
         }
     }
 }

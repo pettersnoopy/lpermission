@@ -1,7 +1,8 @@
 rootProject.name = "permission"
 include ':app',
         ':lpermission',
-        ':matisse'
+        ':matisse',
+        ':lhttp'
 include ':dimen_375'
 include ':ltoast'
 include ':llocation'
